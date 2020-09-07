@@ -1,6 +1,7 @@
 How it works:
 1) pip install requirements.txt
-2)	Run textract on pdfs
+2) Download out_large and add to repo: https://1drv.ms/u/s!Auc3VRul9wo5hgr8jwhFD8iPCYp1?e=UsJJ2V
+3)	Run textract on pdfs
 python3 textractor.py --documents s3://[bucketname]/[pdfname].pdf –-text –tables
 For example:
 python3 textractor.py --documents s3://konektid-dec-resources/PDACT298.pdf -–text
@@ -8,7 +9,7 @@ python3 textractor.py --documents s3://konektid-dec-resources/PDACT298.pdf -–t
 For example:
 python3 textractor.py --documents s3://konektid-dec-resources/PDACT298.pdf –-text --tables
 
-3)	Run driver.py
+4)	Run driver.py
 a.	Parameters: a list of all of the pdf ids, a Boolean indicating whether to use tables or not, list of primes file name, list of job titles file name, evaluations spreadsheet file name, name of results csv file.
 b.	Result = Driver.getData([pdf ids], [use tables], [primes file name], [job titles file name], [evaluations spread sheet file name], [desired results csv file name])
  
