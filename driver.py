@@ -9,10 +9,7 @@ import PyPDF2, requests
 
 class Driver():
         
-    def getData(pdf_list, primes_file, job_titles_file,use_tables):
-        #pdf_list= ['PD-ACU-713', 'PD-ACU-518', 'PD-ACT-298']
-        pdf_list= ['PD-ACT-298']
-
+    def getData(pdf_list, primes_file, job_titles_file,use_tables,output_csv_name):
         #takes out the hypens in the pdf names
         updatedlist = []
         for i in range(0, len(pdf_list)):
@@ -107,10 +104,8 @@ class Driver():
             'All Staff' : staff_list,
             'All Names' : name_list
         })
-        results_file_name = "dec_contact_results.csv"
-        print('here')
-        metadata.to_csv(results_file_name) 
+        metadata.to_csv(output_csv_name) 
 if __name__ == "__main__":
-    result = Driver.getData([],'primes.txt','job-titles.txt',False)
+    result = Driver.getData(['PD-ACT-298'],'primes.txt','job-titles.txt',False)
     
     
