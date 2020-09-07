@@ -11,8 +11,14 @@ For example:
 python3 textractor.py --documents s3://konektid-dec-resources/PDACT298.pdf –-text --tables
 
 5)	Run driver.py
-a.	Parameters: a list of all of the pdf ids, a Boolean indicating whether to use tables or not, list of primes file name, list of job titles file name, evaluations spreadsheet file name, name of results csv file.
-b.	Result = Driver.getData([pdf ids], [use tables], [primes file name], [job titles file name], [evaluations spread sheet file name], [desired results csv file name])
+	Parameters: a list of all of the pdf ids, a Boolean indicating whether to use tables or not, list of primes file name, list of job titles file name, evaluations spreadsheet file name, name of results csv file.
+
+	Result = Driver.getData([pdf ids], [use tables], [primes file name], [job titles file name], [evaluations spread sheet file name], [desired results csv file name])
+
+    For example:
+    Result = Driver.getData(['PD-ACT-298'],'primes.txt','job-titles.txt',False)
+
+
  
 Stats
 1)	Accuracy : 66.5%
