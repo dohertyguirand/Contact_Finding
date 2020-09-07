@@ -9,7 +9,7 @@ import PyPDF2, requests
 
 class Driver():
         
-    def getData(pdf_list, primes_file, job_titles_file,use_tables,output_csv_name):
+    def getData(pdf_list, primes_file, job_titles_file,use_tables,metadata_csv_name,output_csv_name):
         #takes out the hypens in the pdf names
         updatedlist = []
         for i in range(0, len(pdf_list)):
@@ -20,7 +20,7 @@ class Driver():
             updatedlist.append(pdfname)
 
         #fills empty cells with the word "empty
-        df = pd.read_csv('EvaluationsTotal.csv')
+        df = pd.read_csv(metadata_csv_name)
         newdf = df.fillna("Empty")
 
         anc = []

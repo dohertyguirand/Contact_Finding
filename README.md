@@ -13,10 +13,10 @@ python3 textractor.py --documents s3://konektid-dec-resources/PDACT298.pdf –-t
 5)	Run driver.py
 	Parameters: a list of all of the pdf ids, a Boolean indicating whether to use tables or not, list of primes file name, list of job titles file name, evaluations spreadsheet file name, name of results csv file.
 
-	Result = Driver.getData([pdf ids], [use tables], [primes file name], [job titles file name], [evaluations spread sheet file name], [desired results csv file name])
+	Result = Driver.getData([pdf ids], [primes file name], [job titles file name], [evaluations spread sheet file name], [desired results csv file name],[use tables])
 
     For example:
-    Result = Driver.getData(['PD-ACT-298'],'primes.txt','job-titles.txt',False)
+    Result = Driver.getData(['PD-ACT-298'],'primes.txt','job-titles.txt','EvaluationsTotal.csv','DEC_Evaluations_Staffing_Data.csv',False)
 
 
  
